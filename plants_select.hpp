@@ -40,10 +40,10 @@ void select() {
     while (true) {
         int generator_plants = rand() % 7;
         int generator_lanes  = rand() % 5 + 1;
-        if ((GetAsyncKeyState(VK_SPACE) & 0x8001) && !(action_performed)) {
+        if ((GetAsyncKeyState(VK_RETURN) & 0x8001) && !(action_performed)) {
             std::cout << "PUT PLANT " << random_plants[generator_plants] << " ON LANE " << generator_lanes << '\n';
             action_performed = 1;
-        } else if (!(GetAsyncKeyState(VK_SPACE)) & 0x8001) {
+        } else if (!(GetAsyncKeyState(VK_RETURN)) & 0x8001) {
             action_performed = 0;
         }
     }
