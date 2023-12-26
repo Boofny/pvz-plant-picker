@@ -22,7 +22,7 @@ void select() {
 
 
     for(int i = 0; i < 10; i++) {
-        int generator_plants = rand() % 7 + 1;
+        int generator_plants = rand() % 7;
         int generator_lanes  = rand() % 5 + 1;
         std::cout << "PUT PLANT " << random_plants[generator_plants] << " ON LANE " << generator_lanes << '\n';
     }

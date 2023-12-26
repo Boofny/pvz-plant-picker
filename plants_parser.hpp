@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <windows.h>
 
 std::vector<std::string> parse_plants() {
     std::ifstream plants_input("plants.txt");

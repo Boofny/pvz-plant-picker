@@ -1,4 +1,3 @@
-#include <iostream>
 #include "plants_parser.hpp"
 #include "plants_select.hpp"
 
