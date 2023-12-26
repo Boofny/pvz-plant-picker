@@ -3,8 +3,6 @@
 #include "plants_select.hpp"
 
 int main() {
-    std::vector<std::string> plants = parse_plants();
-
-    select(plants);
+    select();
     return 0;
 }
