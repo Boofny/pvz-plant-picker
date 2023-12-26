@@ -17,8 +17,8 @@ void select() {
         random_plants.push_back(plants[random_number]);
     }
 
-    std::cout << "Press any button to start.\n";
-    if (GetAsyncKeyState(getch()) & 0x8001) {}
+    std::cout << "Press ENTER to start.\n";
+    if (GetAsyncKeyState(VK_RETURN) & 0x8001) {}
 
     for(int i = 0; i < 7; i++) {
         SetConsoleTextAttribute(h, i + 1);
@@ -32,8 +32,8 @@ void select() {
     std::cout << '\n';
 
     SetConsoleTextAttribute(h, 7);
-    std::cout << "PRESS ANY BUTTON TO CONTINUE.\n";
-    if (GetAsyncKeyState(getch()) & 0x8001) {}
+    std::cout << "PRESS ENTER TO CONTINUE.\n";
+    if (GetAsyncKeyState(VK_RETURN) & 0x8001) {}
     std::cout << '\n';
 
     int action_performed {0};
