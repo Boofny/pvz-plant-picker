@@ -1,11 +1,10 @@
 #include <iostream>
 #include "plants_parser.hpp"
+#include "plants_select.hpp"
 
 int main() {
     std::vector<std::string> plants = parse_plants();
 
-    for(int i = 0; i < plants.size(); i++) {
-        std::cout << "PLANT NAME: " << plants[i] << '\n';
-    }
+    select(plants);
     return 0;
 }
