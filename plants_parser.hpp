@@ -4,6 +4,7 @@
 #include <fstream>
 #include <vector>
 #include <windows.h>
+#include <conio.h>
 
 std::vector<std::string> parse_plants() {
     std::ifstream plants_input("plants.txt");
