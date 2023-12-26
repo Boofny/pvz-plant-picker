@@ -17,13 +17,16 @@ void select() {
         random_plants.push_back(plants[random_number]);
     }
 
-    std::cout << ".";
+    std::cout << ".\n";
+    if (GetAsyncKeyState(getch()) & 0x8001) {}
+
     for(int i = 0; i < 7; i++) {
         SetConsoleTextAttribute(h, i + 1);
-        std::cout << "SELECT PLANT NUMBER " << i + 1 << ": ";
-        Sleep(1000);
-        std::cout << random_plants[i] << '\n';
-        Sleep(500);
+        if (GetAsyncKeyState(VK_SPACE) & 0x8001) {
+            std::cout << "SELECT PLANT NUMBER " << i + 1 << ": ";
+            Sleep(1000);
+            std::cout << random_plants[i] << '\n';
+        }
     }
 
     Sleep(1000);
