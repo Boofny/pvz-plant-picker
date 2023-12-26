@@ -31,7 +31,7 @@ Starfruit
 Pumpkin
 Magnet-shroom
 Cabbage-Pult
-Flower Pot
+Flower-Pot
 Kernel-Pult
 Coffee-Bean
 Garlic
