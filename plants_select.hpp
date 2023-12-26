@@ -17,6 +17,7 @@ void select() {
         random_plants.push_back(plants[random_number]);
     }
 
+    std::cout << ".";
     for(int i = 0; i < 7; i++) {
         SetConsoleTextAttribute(h, i + 1);
         std::cout << "SELECT PLANT NUMBER " << i + 1 << ": ";
