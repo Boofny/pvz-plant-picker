@@ -17,8 +17,7 @@ void select() {
         random_plants.push_back(plants[random_number]);
     }
 
-    std::cout << "Press ENTER to start.\n";
-    if (GetAsyncKeyState(VK_RETURN) & 0x8001) {}
+    Sleep(1000);
 
     for(int i = 0; i < 7; i++) {
         SetConsoleTextAttribute(h, i + 1);
