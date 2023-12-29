@@ -13,7 +13,7 @@ void select() {
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
     for(int i = 0; i < 7; i++) {
-        int random_number = rand() % 49 + 1;
+        int random_number = rand() % 49;
         random_plants.push_back(plants[random_number]);
     }
 
