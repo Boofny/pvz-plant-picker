@@ -5,7 +5,7 @@
 #include <time.h>
 #include <windows.h>
 
-std::vector<std::string> available_plants = {
+std::vector<std::string> plants_for_level3 = {
     "Peashooter",
     "Sunflower",
     "Cherry-Bomb"
@@ -19,7 +19,7 @@ void randomizer_level3() {
         int generator_plants = rand() % 3;
         int generator_lanes  = rand() % 3 + 1;
         if ((GetAsyncKeyState(VK_RETURN) & 0x8001) && !(action_performed)) {
-            std::cout << "PUT PLANT " << available_plants[generator_plants] << " ON LANE " << generator_lanes << '\n';
+            std::cout << "PUT PLANT " << plants_for_level3[generator_plants] << " ON LANE " << generator_lanes << '\n';
             action_performed = 1;
         } else if (!(GetAsyncKeyState(VK_RETURN)) & 0x8001) {
             action_performed = 0;
