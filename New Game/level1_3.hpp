@@ -1,5 +1,11 @@
 #pragma once
 
+/*
+GENERATOR FOR LEVEL 1 - 3
+
+This was made because level 1 - 3 has three plants and (still) three lanes.
+*/
+
 #include <iostream>
 #include <vector>
 #include <time.h>
