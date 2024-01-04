@@ -1,12 +1,21 @@
 #pragma once
 
 #include "plants_parser.hpp"
+#include "crazy_dave.hpp"
 #include <time.h>
+
+/*
+FEATURES TO ADD:
+
+- Make crazy_dave.hpp (for dealing with plants that Crazy Dave has)
+- Lower the chances for the program to choose night time, pool and rooftop only plants 
+*/
 
 void select() {
     srand(time(NULL));
 
     std::vector<std::string> plants = parse_plants();
+    std::vector<std::string> crazy_dave_plants = crazy_dave();
     std::vector<std::string> random_plants;
     std::vector<int> lane_index = {1, 2, 3, 4, 5};
 
