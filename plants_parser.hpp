@@ -8,11 +8,11 @@
 
 std::vector<std::string> parse_plants() {
     std::ifstream plants_input("plants.txt");
+    std::vector<std::string> plants;
+    std::string element;
 
     if (!plants_input.is_open()) std::cout << "Error! Could not open file.\n";
     else {
-        std::vector<std::string> plants;
-        std::string element;
     
         while (plants_input >> element) {
             plants.push_back(element);
@@ -20,6 +20,6 @@ std::vector<std::string> parse_plants() {
 
         plants_input.close();
 
-        return plants;
     }
+    return plants;
 }
