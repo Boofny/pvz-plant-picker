@@ -2,6 +2,7 @@
 
 #include "plants_parser.hpp"
 #include "crazy_dave.hpp"
+#include <algorithm>
 #include <time.h>
 
 /*
@@ -21,7 +22,9 @@ void select() {
 
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
-    for(int i = 0; i < 7; i++) {
+    int seed_slot = 7;
+
+    for(int i = 0; i < seed_slot; i++) {
         int random_number = rand() % plants.size();
         std::string selected_plant = plants[random_number];
 
@@ -36,11 +39,18 @@ void select() {
         if (!is_duplicate) {
             random_plants.push_back(selected_plant);
         }
+
+        if (std::find(crazy_dave_plants.begin(), crazy_dave_plants.end(), selected_plant) != crazy_dave_plants.end() &&
+            std::find(random_plants.begin(), random_plants.end(), selected_plant) == random_plants.end()) {
+                seed_slot++;
+                random_plants.push_back(selected_plant);
+        }
+
     }
 
     Sleep(1000);
 
-    for(int i = 0; i < 7; i++) {
+    for(int i = 0; i < seed_slot; i++) {
         SetConsoleTextAttribute(h, i + 1);
         std::cout << "SELECT PLANT NUMBER " << i + 1 << ": ";
         Sleep(1000);
