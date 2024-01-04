@@ -40,12 +40,6 @@ void select() {
             random_plants.push_back(selected_plant);
         }
 
-        if (std::find(crazy_dave_plants.begin(), crazy_dave_plants.end(), selected_plant) != crazy_dave_plants.end() &&
-            std::find(random_plants.begin(), random_plants.end(), selected_plant) == random_plants.end()) {
-                seed_slot++;
-                random_plants.push_back(selected_plant);
-        }
-
     }
 
     Sleep(1000);
