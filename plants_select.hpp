@@ -22,8 +22,20 @@ void select() {
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
     for(int i = 0; i < 7; i++) {
-        int random_number = rand() % 41;
-        random_plants.push_back(plants[random_number]);
+        int random_number = rand() % plants.size();
+        std::string selected_plant = plants[random_number];
+
+        bool is_duplicate = false;
+        for (const std::string& existing_plant : random_plants) {
+            if (existing_plant == selected_plant) {
+                is_duplicate = true;
+                break;
+            }
+        }
+
+        if (!is_duplicate) {
+            random_plants.push_back(selected_plant);
+        }
     }
 
     Sleep(1000);
