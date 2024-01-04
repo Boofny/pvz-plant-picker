@@ -1,6 +1,7 @@
 #include <iostream>
 #include "level1_2.hpp"
 #include "level1_3.hpp"
+#include "generation.hpp"
 
 int main() {
     int level;
@@ -13,6 +14,8 @@ int main() {
             break;
         case 3:
             randomizer_level3();
+        default:
+            randomizer();
     }
     return 0;
 }
